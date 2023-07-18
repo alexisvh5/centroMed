@@ -53,10 +53,6 @@ border: 3px solid black;
     border: blue solid  5px;
 }
 .calendario{
-background-image: url(/public/img/calendario-2022-01-pk4ugpkjv6bd4t3g3r81tnu3ut437upvu4dkol96wg.png);
-background-position: center;
-background-size: cover;
-background-repeat: none;
 grid-area: calendario;
 border: 3px solid black;
 }
