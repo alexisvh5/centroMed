@@ -1,158 +1,124 @@
-header{
-background-color: blue;
-grid-area: header;
-border: 3px solid black;display: flex;
-}
-.imagen-logo{
-    width: 31%;
-    height: auto;
-    display: none;
-}
-.imagen-fachada{
-   width: 100%;
-    height: auto;
-}
-.navbar{
-background-color: brown;
-grid-area: navbar;
-border: 3px solid black;
-}
+* {
+  margin: 0px;
+  padding: 0px; }
 
-.navbar ul li{
+header {
+  background-color: blue;
+  grid-area: header;
+  border: 3px solid black;
+  display: flex; }
+
+.imagen-logo {
+  width: 31%;
+  height: auto;
+  display: none; }
+
+.imagen-fachada {
+  width: 100%;
+  height: auto; }
+
+.navbar {
+  background-color: brown;
+  grid-area: navbar;
+  border: 3px solid black; }
+  .navbar ul li {
     margin-bottom: 150px;
     list-style-type: none;
     font-size: 20px;
-    transform: translate(-10px,-10px);
-}
+    transform: translate(-10px, -10px); }
+    .navbar ul li:hover::after {
+      content: "|";
+      display: inline-block;
+      width: 10px;
+      height: 10px; }
+    .navbar ul li a {
+      text-decoration: none;
+      color: black; }
+      .navbar ul li a:hover {
+        transition-duration: 0.3s;
+        font-size: 25px;
+        color: blue; }
 
-.navbar ul li a{
-    text-decoration: none;
-    color: black;
-}
-.navbar-butons{
-  background: rgb(34,121,195);
-background: linear-gradient(175deg, rgba(34,121,195,1) 0%, rgba(45,253,97,1) 100%);
+.navbar-butons {
+  background: #2279c3;
+  background: linear-gradient(175deg, #2279c3 0%, #2dfd61 100%);
+  margin-left: 8px; }
 
-margin-left: 8px;
-}
-.navbar ul li a:hover{
-    transition-duration: 0.3s;
-    font-size: 25px;
-   color: blue;
-}
-.search{
-    background-color: yellow;
-   
-grid-area: search;
-border: 3px solid black;
-}
-.search-barra{
-    margin-top: 10px;
-}
-.search-barra:focus{
-    border: blue solid  5px;
-}
-.calendario{
-grid-area: calendario;
-border: 3px solid black;
-}
-.publi{
-background-color: blueviolet;
+.search {
+  background-color: yellow;
+  grid-area: search;
+  border: 3px solid black; }
 
-grid-area: publi;
-border: 3px solid black;
-}
-.opiniones{
-background-color: white;
-grid-area: opiniones;
-border: 3px solid rgba(21, 106, 37, 0.816);
-}
+.search-barra {
+  margin-top: 10px; }
 
-footer{
-   
-background-color: green;
-grid-area: footer;
-border: 3px solid black;}
+.search-barra:focus {
+  border: blue solid  5px; }
 
-body{
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "search navbar"
-    "publi publi"
-    "opiniones opiniones"
-    "calendario calendario"
-    "footer footer";
-    grid-template-rows: 20% 5% 25% 15% 15% 20% ;
-    grid-template-columns:50% 50%;
-}
+.calendario {
+  grid-area: calendario;
+  border: 3px solid black; }
+
+.publi {
+  background-color: blueviolet;
+  grid-area: publi;
+  border: 3px solid black; }
+
+.opiniones {
+  background-color: white;
+  grid-area: opiniones;
+  border: 3px solid rgba(21, 106, 37, 0.816); }
+
+footer {
+  background-color: green;
+  grid-area: footer;
+  border: 3px solid black; }
+
+body {
+  display: grid;
+  grid-template-areas: "header header" "search navbar" "publi publi" "opiniones opiniones" "calendario calendario" "footer footer";
+  grid-template-rows: 20% 5% 25% 15% 15% 20%;
+  grid-template-columns: 50% 50%; }
 
 @media screen and (min-width: 340px) {
-    body{
-        display: grid;
-        grid-template-areas: 
-        "header header header header"
-        "search search navbar navbar "
-        "publi publi calendario calendario"
-        "publi publi opiniones opiniones"
-        "footer footer footer footer"
-        ;
-        grid-template-rows: 20% 20% 20% 20% 20% ;
-        grid-template-columns: 30% 30% 20% 20%;
-    }
-    .navbar ul{
-       display: flex;
-       flex-wrap: wrap;
-        }
-
-        /*
-        footer{
-            color: aliceblue;
-            font-size: x-large;
-            animation-name: efecto ;
-            animation-iteration-count: infinite;
-            animation-duration: 4s;
-            animation-delay: 1s;
-        }
-        @keyframes efecto {
-            0%{color:aliceblue}
-            25%{color:rgb(177, 193, 208);}
-            50%{color:rgb(133, 160, 183)}
-            75%{color:rgb(66, 107, 142)}
-            100%{color:aliceblue}
-        }*/
-}
-@media screen and (min-width: 760px){
-    body{
-        display: grid;
-        grid-template-areas: "header header header header header header header"
-        "search search navbar navbar navbar navbar navbar"
-        "publi publi publi publi calendario calendario calendario"
-        "publi publi publi publi calendario calendario calendario"
-        "publi publi publi publi calendario calendario calendario"
-        "publi publi publi publi opiniones opiniones opiniones"
-        "publi publi publi publi opiniones opiniones opiniones"
-        "publi publi publi publi opiniones opiniones opiniones"
-        "footer footer footer footer footer footer footer"
-        ;
-        grid-template-rows: 20% 3.57% 11.57% 8.57% 8.57% 8.57% 8.57% 10.57% 20% ;
-        grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
-    }
-    .navbar ul{
-       display: flex;
-       justify-content:flex-end;
-       flex-wrap: wrap;
-        }
-        .imagen-logo{
-            width: 30%;
-            height: auto;
-        display: block;}
-            .imagen-fachada{
-
-                width: 70%;
-               
+  body {
+    display: grid;
+    grid-template-areas: "header header header header" "search search navbar navbar " "publi publi calendario calendario" "publi publi opiniones opiniones" "footer footer footer footer";
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 30% 30% 20% 20%; }
+  .navbar ul {
+    display: flex;
+    flex-wrap: wrap; }
+  /*
+            footer{
+                color: aliceblue;
+                font-size: x-large;
+                animation-name: efecto ;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-delay: 1s;
             }
+            @keyframes efecto {
+                0%{color:aliceblue}
+                25%{color:rgb(177, 193, 208);}
+                50%{color:rgb(133, 160, 183)}
+                75%{color:rgb(66, 107, 142)}
+                100%{color:aliceblue}
+            }*/ }
 
-}
-
-
+@media screen and (min-width: 760px) {
+  body {
+    display: grid;
+    grid-template-areas: "header header header header header header header" "search search navbar navbar navbar navbar navbar" "publi publi publi publi calendario calendario calendario" "publi publi publi publi calendario calendario calendario" "publi publi publi publi calendario calendario calendario" "publi publi publi publi opiniones opiniones opiniones" "publi publi publi publi opiniones opiniones opiniones" "publi publi publi publi opiniones opiniones opiniones" "footer footer footer footer footer footer footer";
+    grid-template-rows: 20% 3.57% 11.57% 8.57% 8.57% 8.57% 8.57% 10.57% 20%;
+    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%; }
+  .navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+  .imagen-logo {
+    width: 30%;
+    height: auto;
+    display: block; }
+  .imagen-fachada {
+    width: 70%; } }
