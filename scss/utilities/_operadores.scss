@@ -1,0 +1,46 @@
+/*map------------------------*/
+
+$img-card:(
+    clinica: url("../img/ecografia.jpg"),
+    cardiologia: url("/public/img/IMG-20150729-WA0024.jpg"),
+    pediatria: url("/public/img/IMG-20150729-WA0032.jpg"),
+    crugia: url("..img/ecografia.jpg")
+);
+
+
+.img-size{
+    width: 200px;
+    height: 600px;
+    border: 10px solid white;
+
+}
+main{
+    display: flex;
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 400px;
+}
+/*MIXIN----------------------------------- se usa con @include "el onmbre del mixin" ()----------*/
+@mixin titulos ($font-size, $color){
+    font-size: $font-size;
+    color: $color;
+}
+/*EACH---------------------------------------------*/
+@each $name, $url in $img-card{
+
+    .img-#{$name}{
+        @extend .img-size;
+        background-image: #{$url};
+        background-size: cover;
+        background-position: contain;
+        @if($name == clinica){
+            border: red solid;
+        }
+    }
+}
+

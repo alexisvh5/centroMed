@@ -1,3 +1,41 @@
+/*map------------------------*/
+.img-size, .img-clinica, .img-cardiologia, .img-pediatria, .img-crugia {
+  width: 200px;
+  height: 600px;
+  border: 10px solid white; }
+
+main {
+  display: flex; }
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 400px; }
+
+/*MIXIN----------------------------------- se usa con @include "el onmbre del mixin" ()----------*/
+/*EACH---------------------------------------------*/
+.img-clinica {
+  background-image: url("../img/ecografia.jpg");
+  background-size: cover;
+  background-position: contain;
+  border: red solid; }
+
+.img-cardiologia {
+  background-image: url("/public/img/IMG-20150729-WA0024.jpg");
+  background-size: cover;
+  background-position: contain; }
+
+.img-pediatria {
+  background-image: url("/public/img/IMG-20150729-WA0032.jpg");
+  background-size: cover;
+  background-position: contain; }
+
+.img-crugia {
+  background-image: url("..img/ecografia.jpg");
+  background-size: cover;
+  background-position: contain; }
+
 * {
   margin: 0px;
   padding: 0px; }
