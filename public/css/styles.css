@@ -16,23 +16,23 @@ main {
 /*MIXIN----------------------------------- se usa con @include "el onmbre del mixin" ()----------*/
 /*EACH---------------------------------------------*/
 .img-clinica {
-  background-image: url("../img/ecografia.jpg");
+  background-image: url("/img/ecografia.jpg");
   background-size: cover;
   background-position: contain;
   border: red solid; }
 
 .img-cardiologia {
-  background-image: url("/public/img/IMG-20150729-WA0024.jpg");
+  background-image: url("/img/IMG-20150729-WA0024.jpg");
   background-size: cover;
   background-position: contain; }
 
 .img-pediatria {
-  background-image: url("/public/img/IMG-20150729-WA0032.jpg");
+  background-image: url("/img/IMG-20150729-WA0032.jpg");
   background-size: cover;
   background-position: contain; }
 
 .img-crugia {
-  background-image: url("..img/ecografia.jpg");
+  background-image: url("/img/ecografia.jpg");
   background-size: cover;
   background-position: contain; }
 
@@ -114,14 +114,23 @@ footer {
 
 body {
   display: grid;
-  grid-template-areas: "header header" "search navbar" "publi publi" "opiniones opiniones" "calendario calendario" "footer footer";
+  grid-template-areas: "header header"
+ "search navbar"
+ "publi publi"
+ "opiniones opiniones"
+ "calendario calendario"
+ "footer footer";
   grid-template-rows: 20% 5% 25% 15% 15% 20%;
   grid-template-columns: 50% 50%; }
 
 @media screen and (min-width: 340px) {
   body {
     display: grid;
-    grid-template-areas: "header header header header" "search search navbar navbar " "publi publi calendario calendario" "publi publi opiniones opiniones" "footer footer footer footer";
+    grid-template-areas: "header header header header"
+ "search search navbar navbar "
+ "publi publi calendario calendario"
+ "publi publi opiniones opiniones"
+ "footer footer footer footer";
     grid-template-rows: 20% 20% 20% 20% 20%;
     grid-template-columns: 30% 30% 20% 20%; }
   .navbar ul {
@@ -147,7 +156,15 @@ body {
 @media screen and (min-width: 760px) {
   body {
     display: grid;
-    grid-template-areas: "header header header header header header header" "search search navbar navbar navbar navbar navbar" "publi publi publi publi calendario calendario calendario" "publi publi publi publi calendario calendario calendario" "publi publi publi publi calendario calendario calendario" "publi publi publi publi opiniones opiniones opiniones" "publi publi publi publi opiniones opiniones opiniones" "publi publi publi publi opiniones opiniones opiniones" "footer footer footer footer footer footer footer";
+    grid-template-areas: "header header header header header header header"
+ "search search navbar navbar navbar navbar navbar"
+ "publi publi publi publi calendario calendario calendario"
+ "publi publi publi publi calendario calendario calendario"
+ "publi publi publi publi calendario calendario calendario"
+ "publi publi publi publi opiniones opiniones opiniones"
+ "publi publi publi publi opiniones opiniones opiniones"
+ "publi publi publi publi opiniones opiniones opiniones"
+ "footer footer footer footer footer footer footer";
     grid-template-rows: 20% 3.57% 11.57% 8.57% 8.57% 8.57% 8.57% 10.57% 20%;
     grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%; }
   .navbar ul {
