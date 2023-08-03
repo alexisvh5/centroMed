@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Medico</title>
+</head>
+<body>
+    
+      <h1>lista de medicos</h1>
+         <ul>
+   <% for( let i = 0; i < busquedaResultante.length; i++ ) { %>
+   
+         
+         <li> Nombre : <%= busquedaResultante[i].nombre  %> </li>
+         <li> Estudio : <%= busquedaResultante[i].universidad  %> </li>
+         <li> Antiguedad : <%= busquedaResultante[i].antiguedad  %> </li>
+         <li> perfil : <img src="<%= busquedaResultante[i].img  %>" alt="perfil"> </li>
+
+
+   <% } %>
+        </ul>
+
+
+</body>
+</html>
